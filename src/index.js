@@ -7,3 +7,4 @@ const root = new Vue({
     el: '#app',
     components: { App }
 });
+
