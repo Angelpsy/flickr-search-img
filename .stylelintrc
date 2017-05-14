@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "color-hex-case": "lower",
+    "no-missing-end-of-source-newline": true,
+    "declaration-block-trailing-semicolon": "always"
+  }
+}
