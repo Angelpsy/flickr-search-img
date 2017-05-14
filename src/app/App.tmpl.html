@@ -1,3 +1,6 @@
-<div class="b-app">
-    MyApp {{ 1 + 2}}
+<div class="b-app" v-on:modalOpen="console.log('open')">
+    <Modal></Modal>
+    <imgsList
+            v-bind:items="items"
+    ></imgsList>
 </div>

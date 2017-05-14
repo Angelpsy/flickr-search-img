@@ -5,13 +5,19 @@ Vue.use(VueResource);
 
 import assign from 'lodash/assign';
 
+import ImgsList from './components/imgsList/imgsList.vue';
+import Modal from './components/modal/modal.vue';
+
 const App = {
     data () {
         return {
             items: []
         }
     },
-    components: {},
+    components: {
+        ImgsList,
+        Modal
+    },
     methods: {
         updateItems: function (params) {
             const that = this;

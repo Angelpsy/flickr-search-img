@@ -1,0 +1,8 @@
+<div class="b-modal" v-show="isOpen">
+    <div class="b-modal__container">
+        <template v-if="img">
+            <img v-bind:src="img.src.medium" alt="img.title">
+            <button v-on:click="close()">Close</button>
+        </template>
+    </div>
+</div>
