@@ -7,6 +7,7 @@ import assign from 'lodash/assign';
 
 import ImgsList from './components/imgsList/imgsList.vue';
 import Modal from './components/modal/modal.vue';
+import Search from './components/search/search.vue';
 
 const App = {
     data () {
@@ -16,7 +17,8 @@ const App = {
     },
     components: {
         ImgsList,
-        Modal
+        Modal,
+        Search
     },
     methods: {
         updateItems: function (params) {
@@ -34,9 +36,9 @@ const App = {
                 params
             }).then(response => {}, response => {});
         },
-        searchImgByTegs: function (tegs) {
+        searchImgByTags: function (tags) {
             this.updateItems({
-                tegs: tegs
+                tags: tags
             });
         }
     },

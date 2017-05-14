@@ -1,0 +1,20 @@
+<div class="b-search">
+    <div class="b-search__container">
+        <div class="b-search__row">
+            <label>
+                Search
+                <input type="text" v-model="q">
+            </label>
+        </div>
+        <div class="b-search__row">
+            <button
+                    class="b-search__button"
+                    type="button"
+                    v-on:click="onSearch"
+                    v-bind:disabled="!q"
+                    >
+                Search
+            </button>
+        </div>
+    </div>
+</div>

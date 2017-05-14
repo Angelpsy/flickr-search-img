@@ -15,7 +15,10 @@ const img = {
                 src: {
                     base: this.item.media.m,
                     medium: getUrlImgSize(this.item.media.m, 'c'),
-                }
+                },
+                title: this.item.title,
+                tags: this.item.tags,
+                original: this.item.link
             }
         }
     },

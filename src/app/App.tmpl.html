@@ -1,4 +1,5 @@
 <div class="b-app" v-on:modalOpen="console.log('open')">
+    <Search v-on:onSearch="searchImgByTags"></Search>
     <Modal></Modal>
     <imgsList
             v-bind:items="items"
