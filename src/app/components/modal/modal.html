@@ -1,8 +1,17 @@
-<div class="b-modal" v-show="isOpen">
-    <div class="b-modal__container">
-        <template v-if="img">
-            <img v-bind:src="img.src.medium" alt="img.title">
-            <button v-on:click="close()">Close</button>
-        </template>
+<transition
+        name="fade"
+        v-on:after-leave="afterLeave">
+    <div class="b-modal" v-show="isOpen" v-on:click.self="close()">
+        <div class="b-modal__container">
+            <div class="b-modal__btn-close" v-on:click="close()"><i class="fa fa-times"></i></div>
+            <div class="b-modal__wrapper">
+                <div class="b-modal__content">
+                    <div class="b-modal__header" v-if="img">{{img.title}}</div>
+                    <div class="b-modal__main" v-if="img">
+                        <img v-bind:src="img.src.medium" alt="img.title">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</transition>

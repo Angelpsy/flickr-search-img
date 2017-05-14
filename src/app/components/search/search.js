@@ -7,6 +7,9 @@ const search = {
     methods: {
         onSearch: function () {
             this.$emit('onSearch', this.q);
+        },
+        onSearchAll: function () {
+            this.$emit('onSearch', '');
         }
     }
 };

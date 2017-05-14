@@ -61,6 +61,29 @@ module.exports = function(env) {
                         limit: isServer ? 1000000000 : 4000
                     }
                 },
+                {
+                    test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                    loader: "url-loader",
+                    query: {
+                        mimetype: 'application/font-woff',
+                        outputPath: './',
+                        publicPath: './',
+                        emitFile: true,
+                        useRelativePath: false,
+                        limit: isServer ? 1000000000 : 4000
+                    }
+                },
+                {
+                    test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                    loader: "url-loader",
+                    query: {
+                        outputPath: './',
+                        publicPath: './',
+                        emitFile: true,
+                        useRelativePath: false,
+                        limit: isServer ? 1000000000 : 4000
+                    }
+                },
             ],
         },
         plugins: [

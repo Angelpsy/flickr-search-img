@@ -13,10 +13,11 @@ const modal = {
             this.isOpen = true;
         },
         close: function () {
-            console.log('close');
             this.isOpen = false;
-            this.img = null;
         },
+        afterLeave: function() {
+            this.img = null;
+        }
     },
     created: function () {
         const that = this;

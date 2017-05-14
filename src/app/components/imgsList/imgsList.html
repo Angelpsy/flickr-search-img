@@ -1,7 +1,7 @@
-<div class="b-imgs-list">
-    <div class="b-imgs-list__container">
+<div class="container">
+    <div class="row b-imgs-list">
         <template v-for="item in items">
-            <FlickImg v-bind:item="item" className="b-imgs-list__item" />
+            <FlickImg v-bind:item="item" className="col-sm-6 col-lg-4" />
         </template>
     </div>
 </div>
